@@ -3,10 +3,11 @@ Note: requires the WORD2VEC environment variable pointing at the .bin file
 """
 import os
 from gensim.models import KeyedVectors
-from word2vec_agg.word2vec import docvector
 import pytest
 from gensim.utils import simple_tokenize
 from scipy.spatial import distance
+
+from word2vec_agg.word2vec import docvector
 
 word2vec_path = os.environ['WORD2VEC']
 word2vec = KeyedVectors.load_word2vec_format(word2vec_path, binary=True)
